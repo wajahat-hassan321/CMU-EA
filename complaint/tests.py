@@ -1,3 +1,7 @@
-from django.test import TestCase
+import win32com.client
 
-# Create your tests here.
+outlook = win32com.client.Dispatch(
+    "Outlook.Application"
+)
+
+print("Outlook Connected Successfully")

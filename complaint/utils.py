@@ -9,7 +9,7 @@ def send_complaint_email(complaint):
 
     mail.To = complaint.email
 
-    mail.Subject = f"Complaint Update - {complaint.crn_no}"
+    mail.Subject = f"Complaint Update - {complaint.crn_no}-Note this is a testing email"
 
     mail.HTMLBody = f"""
     <html>
