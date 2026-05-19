@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Complaint CSV</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            background:#f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .card{
+            background:white;
+            width:450px;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .title{
+            text-align:center;
+            font-size:28px;
+            font-weight:bold;
+            color:#1e3a8a;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#6b7280;
+            margin-bottom:30px;
+            font-size:14px;
+        }
+
+        .file-input{
+            margin-bottom:25px;
+        }
+
+        input[type="file"]{
+            width:100%;
+            padding:12px;
+            border:2px dashed #cbd5e1;
+            border-radius:10px;
+            background:#f9fafb;
+            cursor:pointer;
+        }
+
+        .upload-btn{
+            width:100%;
+            background:#1e3a8a;
+            color:white;
+            border:none;
+            padding:14px;
+            border-radius:10px;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .upload-btn:hover{
+            background:#172554;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="title">
+            Complaint Management
+        </div>
+
+        <div class="subtitle">
+            Upload your complaint CSV file
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="file-input">
+                {{ form }}
+            </div>
+
+            <button type="submit" class="upload-btn">
+                Upload CSV
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

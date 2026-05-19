@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Upload Successful</title>
+
+    <style>
+
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f4f6f9;
+            font-family:Arial;
+        }
+
+        .card{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            width:450px;
+            text-align:center;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            color:#16a34a;
+            margin-bottom:15px;
+        }
+
+        p{
+            color:#6b7280;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            display:block;
+            margin-bottom:15px;
+            padding:14px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .send-btn{
+            background:#1e3a8a;
+            color:white;
+        }
+
+        .back-btn{
+            background:#e5e7eb;
+            color:#111827;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>CSV Uploaded Successfully</h1>
+
+    <p>
+        Complaints have been saved successfully.
+    </p>
+
+    <a href="/send-emails/" class="btn send-btn">
+        Send Emails
+    </a>
+
+    <a href="/" class="btn back-btn">
+        Upload Another File
+    </a>
+
+</div>
+
+</body>
+</html>
